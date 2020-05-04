@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/reset.css">
+  <link rel="stylesheet" href="static/css/styles.css">
+
+  <title>Frontend Mentor | Social media dashboard with theme switcher</title>
+</head>
+
+<body>
+  <header>
+    <div class="l-grid-wrapper l-grid-wrapper--header">
+      <div class="c-header__title">
+        <h1>Social Media Dashboard</h1>
+        <p>Total Followers: 23,004</p>
+        <hr />
+      </div>
+      <div class="c-switch__wrapper">
+        <p class="c-switch__label">Dark Mode</p>
+        <div class="c-switch">
+          <label for="checkbox">
+            <input type="checkbox" name="" id="js-toggle-input" class="c-switch__input">
+            <span class="c-switch__toggle" id="js-toggle-switch"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="l-grid-wrapper l-grid-wrapper--followers">
+      <article class="c-card c-card--fb">
+        <div class="c-card__item c-card__text--bold">
+          <img src="./images/icon-facebook.svg" alt="facebook icon" class="c-card__icon">
+          @nathanf
+        </div>
+        <div class="c-card__highlight">
+          <h3 class="title--xlarge">1987</h3>
+          <span class="c-card__text--spaced">Followers</span>
+        </div>
+        <div class="c-card__item c-card__text--increase">
+          <img src="./images/icon-up.svg" alt="icon up" class="c-card__icon">
+          12 Today
+        </div>
+      </article>
+      <article class="c-card c-card--tw">
+        <div class="c-card__item c-card__text--bold">
+          <img src="./images/icon-twitter.svg" alt="twitter icon" class="c-card__icon">
+          @nathanf
+        </div>
+        <div class="c-card__highlight">
+          <h3 class="title--xlarge">1044</h3>
+          <span class="c-card__text--spaced">Followers</span>
+        </div>
+        <div class="c-card__item c-card__text--increase">
+          <img src="./images/icon-up.svg" alt="icon up" class="c-card__icon">
+          99 Today
+        </div>
+      </article>
+      <article class="c-card c-card--ig">
+        <div class="c-card__item c-card__text--bold">
+          <img src="./images/icon-instagram.svg" alt="instagram icon" class="c-card__icon">
+          @realnathanf
+        </div>
+        <div class="c-card__highlight">
+          <h3 class="title--xlarge">11k</h3>
+          <span class="c-card__text--spaced">Followers</span>
+        </div>
+        <div class="c-card__item c-card__text--increase">
+          <img src="./images/icon-up.svg" alt="icon up" class="c-card__icon">
+          1099 Today
+        </div>
+      </article>
+      <article class="c-card c-card--yt">
+        <div class="c-card__item c-card__text--bold">
+          <img src="./images/icon-youtube.svg" alt="youtube icon" class="c-card__icon">
+          Nathan F.
+        </div>
+        <div class="c-card__highlight">
+          <h3 class="title--xlarge">8239</h3>
+          <span class="c-card__text--spaced">Subscribers</span>
+        </div>
+        <div class="c-card__item c-card__text--decrease">
+          <img src="./images/icon-down.svg" alt="icon down" class="c-card__icon">
+          144 Today
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h3 class="title--medium title--overview">Overview - Today</h3>
+    <div class="l-grid-wrapper l-grid-wrapper--overview">
+      <article class="c-card">
+        <div class="c-card__item c-card__item--overview">
+          <p class="c-card__text--bold">Page Views</p>
+          <img src="./images/icon-facebook.svg" alt="icon facebook">
+        </div>
+        <div class="c-card__item c-card__item--overview">
+          <h4 class="title--large margin-0">87</h4>
+          <div class="c-card__text--increase">
+            <img src="./images/icon-up.svg" alt="">
+            3%
+          </div>
+        </div>
+      </article>
+      <article class="c-card">
+        <div class="c-card__item c-card__item--overview">
+          <p class="c-card__text--bold">Likes</p>
+          <img src="./images/icon-facebook.svg" alt="icon facebook">
+        </div>
+        <div class="c-card__item c-card__item--overview">
+          <h4 class="title--large margin-0">52</h4>
+          <div class="c-card__text--increase">
+            <img src="./images/icon-up.svg" alt="">
+            2%
+          </div>
+        </div>
+      </article>
+      <article class="c-card">
+        <div class="c-card__item c-card__item--overview">
+          <p class="c-card__text--bold">Likes</p>
+          <img src="./images/icon-instagram.svg" alt="icon instagram">
+        </div>
+        <div class="c-card__item c-card__item--overview">
+          <h4 class="title--large margin-0">5462</h4>
+          <div class="c-card__text--increase">
+            <img src="./images/icon-up.svg" alt="">
+            2257%
+          </div>
+        </div>
+      </article>
+      <article class="c-card">
+        <div class="c-card__item c-card__item--overview">
+          <p class="c-card__text--bold">Profile Views</p>
+          <img src="./images/icon-instagram.svg" alt="icon instagram">
+        </div>
+        <div class="c-card__item c-card__item--overview">
+          <h4 class="title--large margin-0">52k</h4>
+          <div class="c-card__text--increase">
+            <img src="./images/icon-up.svg" alt="">
+            1375%
+          </div>
+        </div>
+      </article>
+      <article class="c-card">
+        <div class="c-card__item c-card__item--overview">
+          <p class="c-card__text--bold">Retweets</p>
+          <img src="./images/icon-facebook.svg" alt="icon facebook">
+        </div>
+        <div class="c-card__item c-card__item--overview">
+          <h4 class="title--large margin-0">117</h4>
+          <div class="c-card__text--increase">
+            <img src="./images/icon-up.svg" alt="">
+            303%
+          </div>
+        </div>
+      </article>
+      <article class="c-card">
+        <div class="c-card__item c-card__item--overview">
+          <p class="c-card__text--bold">Likes</p>
+          <img src="./images/icon-facebook.svg" alt="icon facebook">
+        </div>
+        <div class="c-card__item c-card__item--overview">
+          <h4 class="title--large margin-0">507</h4>
+          <div class="c-card__text--increase">
+            <img src="./images/icon-up.svg" alt="">
+            553%
+          </div>
+        </div>
+      </article>
+      <article class="c-card">
+        <div class="c-card__item c-card__item--overview">
+          <p class="c-card__text--bold">Likes</p>
+          <img src="./images/icon-youtube.svg" alt="icon youtube">
+        </div>
+        <div class="c-card__item c-card__item--overview">
+          <h4 class="title--large margin-0">107</h4>
+          <div class="c-card__text--decrease">
+            <img src="./images/icon-down.svg" alt="">
+            19%
+          </div>
+        </div>
+      </article>
+      <article>
+      <article class="c-card">
+        <div class="c-card__item c-card__item--overview">
+          <p class="c-card__text--bold">Total Views</p>
+          <img src="./images/icon-youtube.svg" alt="icon youtube">
+        </div>
+        <div class="c-card__item c-card__item--overview">
+          <h4 class="title--large margin-0">1407</h4>
+          <div class="c-card__text--decrease">
+            <img src="./images/icon-down.svg" alt="">
+            12%
+          </div>
+        </div>
+      </article>
+      <article>
+
+
+
+      </article>
+      <article>
+
+
+
+      </article>
+    </div>
+  </section>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">@chrysillala</a>.
+  </div>
+
+  <script src="./src/js/main.js"></script>
+</body>
+
+</html>

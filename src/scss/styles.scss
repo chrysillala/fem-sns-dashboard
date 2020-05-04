@@ -1,0 +1,335 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+:root {
+  // font
+  --font-inter: Inter;
+  --font-size-default: 14px;
+
+  // color
+  // primary
+  --color-limegreen: hsl(163, 72%, 41%);
+  --color-brightred: hsl(356, 69%, 56%);
+
+  --color-facebook: hsl(195, 100%, 50%);
+  --color-twitter: hsl(203, 89%, 53%);
+  --color-instagram-1: hsl(37, 97%, 70%);
+  --color-instagram-2: hsl(329, 70%, 58%);
+  --color-youtube: hsl(348, 97%, 39%);
+
+  --color-white: hsl(0, 0%, 100%);
+  --color-v-darkblue: hsl(230, 17%, 14%);
+
+  // light theme
+  --color-light-toggle: hsl(230, 22%, 74%);
+  --color-v-paleblue: hsl(225, 100%, 98%);
+  --color-l-grayishblue: hsl(227, 47%, 96%);
+  --color-d-grayishblue: hsl(228, 12%, 44%);
+
+  // dark theme
+  --color-dark-toggle-1: hsl(210, 78%, 56%);
+  --color-dark-toggle-2: hsl(146, 68%, 55%);
+  --color-v-darkblue-2: hsl(232, 19%, 15%);
+  --color-d-desaturatedblue: hsl(228, 28%, 20%);
+  --color-desaturatedblue: hsl(228, 34%, 66%);
+
+  // animations
+  --transition-default: ease-in .3s;
+}
+
+html {
+  font-size: var(--font-size-default);
+}
+
+body {
+  font-family: var(--font-inter), sans-serif;
+  background-color: var(--color-white);
+  margin: 70px 30px;
+  display: grid;
+  color: var(--color-d-grayishblue);
+  transition: var(--transition-default);
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    margin-bottom: .5rem;
+    font-weight: 700;
+    color: var(--color-v-darkblue);
+  }
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1.3rem;
+}
+
+hr {
+  margin: 20px 0;
+  @media only screen and (min-width: 1440px) {
+    display: none;
+  }
+}
+
+header, section {
+  margin-bottom: 50px;
+}
+
+.title {
+  &--medium {
+    font-size: 2rem;
+  }
+
+  &--large {
+    font-size: 3rem;
+  }
+
+  &--xlarge {
+    font-size: 4rem;
+  }
+
+  &--overview {
+    color: var(--color-d-grayishblue);
+    margin-bottom: 28px;
+  }
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.l-grid-wrapper {
+  display: grid;
+
+  @media only screen and (min-width: 1440px) {
+    grid-template-columns: repeat(4, 1fr);
+
+    &--header {
+      grid-template-areas:
+      'h1 . . h2';
+    }
+  }
+
+  &--followers {
+    grid-column-gap: 28px;
+    grid-row-gap: 28px;
+  }
+
+  &--overview {
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+}
+
+.c-header {
+  &__title {
+    @media only screen and (min-width: 1440px) {
+      grid-area: h1;
+    }
+  }
+}
+
+.c-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+
+  &__input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked {
+      + .c-switch__toggle {
+        background: linear-gradient(var(--color-dark-toggle-1), var(--color-dark-toggle-2));
+      }
+
+      + .c-switch__toggle:before {
+        transform: translateX(-28px);
+        background-color: var(--color-v-darkblue);
+      }
+    }
+
+    &:focus {
+      + .c-switch__toggle {
+        box-shadow: 0 0 1px #2196F3;
+      }
+    }
+  }
+
+  &__toggle {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-light-toggle);
+    transition: var(--transition-default);
+    border-radius: 20px;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 24px;
+      width: 24px;
+      right: 4px;
+      bottom: 3px;
+      background-color: var(--color-white);
+      transition: var(--transition-default);
+      border-radius: 50%;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (min-width: 1440px) {
+      justify-content: flex-end;
+      grid-area: h2;
+    }
+  }
+
+  &__label {
+    font-weight: 700;
+    margin-right: 14px;
+  }
+}
+
+.c-card {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  background-color: var(--color-v-paleblue);
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+
+  @media only screen and (min-width: 1440px) {
+  &:hover {
+      background-color: var(--color-l-grayishblue);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    &--overview {
+      justify-content: space-between;
+
+      &:not(:last-child) {
+        margin-bottom: 14px;
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 7px;
+  }
+
+  &__highlight {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  &__text {
+    &--spaced {
+      letter-spacing: 5px;
+      text-transform: uppercase;
+    }
+
+    &--increase {
+      color: var(--color-limegreen);
+      font-weight: 700;
+    }
+
+    &--decrease {
+      color: var(--color-brightred);
+      font-weight: 700;
+    }
+
+    &--bold {
+      font-weight: 700;
+    }
+  }
+
+  &--overview {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  &--fb {
+    border-top: 5px solid var(--color-facebook);
+  }
+
+  &--tw {
+    border-top: 5px solid var(--color-twitter);
+  }
+
+  &--ig {
+    background: linear-gradient(90deg, var(--color-instagram-1), var(--color-instagram-2))
+    no-repeat
+    top / auto 5px,
+    var(--color-v-paleblue);
+  }
+
+  &--yt {
+    border-top: 5px solid var(--color-youtube);
+  }
+}
+
+// styles for dark mode
+.dark-mode {
+  background-color: var(--color-v-darkblue);
+  color: var(--color-desaturatedblue);
+
+  @for $i from 1 through 6 {
+    h#{$i} {
+      color: var(--color-white);
+    }
+  }
+
+  .c-card {
+    background-color: var(--color-v-darkblue-2);
+
+    @media only screen and (min-width: 1440px) {
+      &:hover {
+        background-color: var(--color-d-desaturatedblue);
+      }
+    }
+  }
+
+  .c-switch {
+    &__label {
+      color: var(--color-white);
+    }
+  }
+}
