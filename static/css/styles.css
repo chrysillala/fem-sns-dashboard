@@ -241,10 +241,12 @@ header, section {
     color: var(--color-white); }
   .dark-mode h6 {
     color: var(--color-white); }
+  .dark-mode a {
+    color: var(--color-white); }
   .dark-mode .c-card {
-    background-color: var(--color-v-darkblue-2); }
+    background-color: var(--color-d-desaturatedblue); }
     @media only screen and (min-width: 1440px) {
       .dark-mode .c-card:hover {
-        background-color: var(--color-d-desaturatedblue); } }
+        filter: brightness(1.3); } }
   .dark-mode .c-switch__label {
     color: var(--color-white); }
