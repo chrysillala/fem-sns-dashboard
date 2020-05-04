@@ -36,6 +36,9 @@ body {
   display: grid;
   color: var(--color-d-grayishblue);
   transition: var(--transition-default); }
+  @media only screen and (min-width: 1440px) {
+    body {
+      margin: 70px; } }
 
 h1 {
   margin-bottom: .5rem;

@@ -51,6 +51,10 @@ body {
   display: grid;
   color: var(--color-d-grayishblue);
   transition: var(--transition-default);
+
+  @media only screen and (min-width: 1440px) {
+    margin: 70px;
+  }
 }
 
 @for $i from 1 through 6 {
