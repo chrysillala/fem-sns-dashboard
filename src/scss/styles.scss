@@ -46,7 +46,12 @@ html {
 
 body {
   font-family: var(--font-inter), sans-serif;
-  background-color: var(--color-white);
+  background: linear-gradient(
+    to bottom,
+    var(--color-v-paleblue) 30%,
+    var(--color-white) 30%,
+    var(--color-white) 100%);
+  background-repeat: no-repeat;
   margin: 70px 30px;
   display: grid;
   color: var(--color-d-grayishblue);
@@ -260,7 +265,7 @@ header, section {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    margin: 20px 0;
+    margin: 40px 0;
   }
 
   &__text {
@@ -299,10 +304,10 @@ header, section {
   }
 
   &--ig {
-    background: linear-gradient(90deg, var(--color-instagram-1), var(--color-instagram-2))
-    no-repeat
-    top / auto 5px,
-    var(--color-v-paleblue);
+    background-image: linear-gradient(to right, var(--color-instagram-1), var(--color-instagram-2));
+    background-size: 100% 5px;
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
   }
 
   &--yt {
@@ -312,7 +317,11 @@ header, section {
 
 // styles for dark mode
 .dark-mode {
-  background-color: var(--color-v-darkblue);
+  background: linear-gradient(
+    to bottom,
+    var(--color-v-darkblue-2) 30%,
+    var(--color-v-darkblue) 30%,
+    var(--color-v-darkblue) 100%);
   color: var(--color-desaturatedblue);
 
   @for $i from 1 through 6 {

@@ -1,10 +1,10 @@
 function toggleTheme() {
-  if(!toggleInput.checked) {
+  if(toggleInput.checked) {
     toggleInput.setAttribute('checked', 'checked')
-    document.body.classList.add('dark-mode')
+    document.body.classList.remove('dark-mode')
   } else {
     toggleInput.removeAttribute('checked')
-    document.body.classList.remove('dark-mode')
+    document.body.classList.add('dark-mode')
   }
 
 }

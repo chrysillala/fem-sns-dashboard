@@ -31,7 +31,8 @@ html {
 
 body {
   font-family: var(--font-inter), sans-serif;
-  background-color: var(--color-white);
+  background: linear-gradient(to bottom, var(--color-v-paleblue) 30%, var(--color-white) 30%, var(--color-white) 100%);
+  background-repeat: no-repeat;
   margin: 70px 30px;
   display: grid;
   color: var(--color-d-grayishblue);
@@ -204,7 +205,7 @@ header, section {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    margin: 20px 0; }
+    margin: 40px 0; }
   .c-card__text--spaced {
     letter-spacing: 5px;
     text-transform: uppercase; }
@@ -225,12 +226,15 @@ header, section {
   .c-card--tw {
     border-top: 5px solid var(--color-twitter); }
   .c-card--ig {
-    background: linear-gradient(90deg, var(--color-instagram-1), var(--color-instagram-2)) no-repeat top/auto 5px, var(--color-v-paleblue); }
+    background-image: linear-gradient(to right, var(--color-instagram-1), var(--color-instagram-2));
+    background-size: 100% 5px;
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat; }
   .c-card--yt {
     border-top: 5px solid var(--color-youtube); }
 
 .dark-mode {
-  background-color: var(--color-v-darkblue);
+  background: linear-gradient(to bottom, var(--color-v-darkblue-2) 30%, var(--color-v-darkblue) 30%, var(--color-v-darkblue) 100%);
   color: var(--color-desaturatedblue); }
   .dark-mode h1 {
     color: var(--color-white); }
