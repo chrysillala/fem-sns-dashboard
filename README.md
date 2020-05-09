@@ -1,3 +1,5 @@
+[LIVE PREVIEW](https://fem-sns-dashboard.now.sh/)
+
 # Frontend Mentor - Social media dashboard with theme switcher
 
 ![Design preview for the Social media dashboard with theme switcher coding challenge](./design/desktop-preview.jpg)
